@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="301.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.comp.MainWindowController">
+   <children>
+      <Button fx:id="startButton" layoutX="324.0" layoutY="14.0" mnemonicParsing="false" onAction="#startGame" onKeyPressed="#startGame" prefHeight="95.0" prefWidth="151.0" text="%startButton" textFill="RED">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.04" specularConstant="0.15" specularExponent="14.77" surfaceScale="3.65">
+               <bumpInput>
+                  <InnerShadow radius="4.75" width="0.0">
+                     <color>
+                        <Color red="0.13947369158267975" green="0.13947369158267975" blue="0.13947369158267975" />
+                     </color></InnerShadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.9103326201438904" green="0.9394736886024475" blue="0.5897806882858276" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <ComboBox fx:id="difficultyComboBox" layoutX="260.0" layoutY="150.0" onAction="#onActionDifficultyComboBox" prefHeight="25.0" prefWidth="237.0" promptText="%difficultyComboBox" />
+      <CheckBox fx:id="readSudokuFromFileCheckBox" layoutX="324.0" layoutY="118.0" mnemonicParsing="false" onAction="#onActionReadSudokuFromFileCheckBox" text="%readSudoku" />
+      <ComboBox fx:id="languageComboBox" layoutX="14.0" layoutY="36.0" onAction="#onActionLanguageComboBox" prefHeight="25.0" prefWidth="139.0" promptText="%languageComboBox" />
+      <Button fx:id="confirmLanguageButton" layoutX="58.0" layoutY="68.0" mnemonicParsing="false" onAction="#onActionConfirmLanguageButton" text="%langConf" />
+      <Button fx:id="authorsButton" layoutY="274.0" mnemonicParsing="false" onAction="#onActionAuthorsButton" text="%authors" />
+   </children>
+</Pane>

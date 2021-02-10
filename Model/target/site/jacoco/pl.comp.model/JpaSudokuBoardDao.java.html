@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JpaSudokuBoardDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ModelProject</a> &gt; <a href="index.source.html" class="el_package">pl.comp.model</a> &gt; <span class="el_source">JpaSudokuBoardDao.java</span></div><h1>JpaSudokuBoardDao.java</h1><pre class="source lang-java linenums">package pl.comp.model;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Optional;
+import java.util.ResourceBundle;
+import javax.persistence.EntityManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import pl.comp.model.exceptions.NoSuchFileException;
+import pl.comp.model.exceptions.ReadFromFileException;
+import pl.comp.model.exceptions.WriteToDatabaseException;
+import pl.comp.model.exceptions.WriteToFileException;
+
+public class JpaSudokuBoardDao implements Dao&lt;SudokuBoard&gt; {
+    private EntityManager entityManager;
+<span class="fc" id="L17">    private static final Logger logger =</span>
+<span class="fc" id="L18">            LogManager.getLogger(FileSudokuBoardDao.class.getName());</span>
+<span class="fc" id="L19">    private ResourceBundle bundle = ResourceBundle.getBundle(&quot;Language&quot;);</span>
+
+
+<span class="fc" id="L22">    public JpaSudokuBoardDao(EntityManager entityManager) {</span>
+<span class="fc" id="L23">        this.entityManager = entityManager;</span>
+<span class="fc" id="L24">    }</span>
+
+    //all boards from DB:
+    public List&lt;SudokuBoard&gt; findAll() {
+<span class="fc" id="L28">        return entityManager</span>
+<span class="fc" id="L29">                .createQuery(&quot;select a from SudokuBoard a&quot;, SudokuBoard.class)</span>
+<span class="fc" id="L30">                .getResultList();</span>
+    }
+
+
+    //write to DB:
+    public boolean write(SudokuBoard sudokuBoard) throws WriteToDatabaseException {
+        try {
+<span class="fc" id="L37">            entityManager.getTransaction().begin();</span>
+<span class="fc" id="L38">            entityManager.persist(sudokuBoard);</span>
+<span class="fc" id="L39">            entityManager.getTransaction().commit();</span>
+<span class="fc" id="L40">            return true;</span>
+<span class="nc" id="L41">        } catch (Exception e) {</span>
+<span class="nc" id="L42">            logger.error(bundle.getObject(&quot;writeDBErrorMessage&quot;).toString());</span>
+<span class="nc" id="L43">            throw new WriteToDatabaseException(bundle</span>
+<span class="nc" id="L44">                    .getObject(&quot;writeDBErrorMessage&quot;).toString(), e);</span>
+
+        }
+    }
+
+    //read first Board from DB:
+    @Override
+    public SudokuBoard read() {
+<span class="fc" id="L52">        SudokuBoard sudokuBoard = entityManager.find(SudokuBoard.class, 1L);</span>
+<span class="fc" id="L53">        return sudokuBoard;</span>
+    }
+
+    //read chosen Board from DB:
+    public SudokuBoard read(Long id) {
+<span class="fc" id="L58">        SudokuBoard sudokuBoard = entityManager.find(SudokuBoard.class, id);</span>
+<span class="fc" id="L59">        return sudokuBoard;</span>
+    }
+
+    /*
+    @Override //checkstyle mowi aby unikac tej metody,
+    //jednak zgodnie z poleceniem na Wikampie mielismy ja nadpisac
+    //dlatego nadpisalismy ja, ale musielismy zakomentowac aby chekstyle przechodzil
+    protected void finalize() throws Throwable {
+        entityManager.close();
+
+        //logger.info(&quot;files closed using finalize method&quot;);
+    }
+    */
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

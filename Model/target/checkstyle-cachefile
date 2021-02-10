@@ -1,0 +1,25 @@
+#Wed Jun 03 03:09:58 CEST 2020
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\WrongElementSizeException.java=1590530889183
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuSolver.java=1588861370099
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuRow.java=1588861370147
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\BacktrackingSudokuSolver.java=1588861903408
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuBox.java=1588861370147
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuBoardDaoFactory.java=1591137231378
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\WriteToFileException.java=1590528302395
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuField.java=1591111867212
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\NoSuchFileException.java=1590528302408
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\JpaSudokuBoardDao.java=1591137231387
+configuration*?=1C85527F56F7AE6A20C1826C3E4A1E3D3A47A24C
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\Dao.java=1591135131238
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\resources\\Language_pl.properties=1591138541391
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\ModelException.java=1590525927868
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuColumn.java=1588861370099
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\FileSudokuBoardDao.java=1590534572956
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuBoard.java=1591111595071
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\ReadFromFileException.java=1590528302423
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\SudokuElement.java=1590534652482
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\ModelRuntimeException.java=1590529851946
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\WriteToDatabaseException.java=1591135131270
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\resources\\Language_en.properties=1591138541400
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\resources\\log4j2.properties=1590529851927
+C\:\\Users\\Hubert\\Documents\\studia\\Kompo\\ProKom1\\Model\\src\\main\\java\\pl\\comp\\model\\exceptions\\WrongFieldValueException.java=1590530889229
