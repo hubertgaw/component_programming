@@ -9,3 +9,6 @@ Technologies which were used:
 * Apache Maven
 * JavaFX
 * H2 Database
+
+![alt text](https://github.com/hubertgaw/component_programming/blob/master/screenshots/sudoku1.jpg)
+![alt text](https://github.com/hubertgaw/component_programming/blob/master/screenshots/sudoku2.jpg)
