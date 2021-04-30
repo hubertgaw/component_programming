@@ -12,3 +12,7 @@ Technologies which were used:
 
 ![alt text](https://github.com/hubertgaw/component_programming/blob/master/screenshots/sudoku1.jpg)
 ![alt text](https://github.com/hubertgaw/component_programming/blob/master/screenshots/sudoku2.jpg)
+
+Contributors:
+* [Hubert Gawłowski](https://github.com/hubertgaw)
+* Dominik Jabłoński
